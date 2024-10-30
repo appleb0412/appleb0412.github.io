@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>warning</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000; /* Black background */
+            font-family: 'Arial', sans-serif; /* Standard font */
+            color: #ff0000; /* Red text */
+            text-align: center;
+        }
+        h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8); /* Red shadow */
+        }
+        .start-button {
+            background-color: #ff0000; /* Red button */
+            color: #fff; /* White text */
+            font-size: 20px;
+            font-weight: bold;
+            padding: 15px 25px;
+            border: none; /* No border */
+            border-radius: 30px; /* Rounded button */
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            text-transform: uppercase;
+        }
+        .start-button:hover {
+            background-color: #cc0000; /* Darker red */
+            transform: scale(1.1);
+        }
+        .start-button:active {
+            transform: scale(0.0); /* Scale down on click */
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1>
+            -These are all non-profit-
+            <br>
+            This experience is to raise awareness of suicidal behavior and gain a deeper understanding of suicide.
+            <br>
+            This experience explores themes of suicidal psychology and includes content related to violence, gore, death, loss, mental health issues, psychological terror, abuse, self-harm, and suicide. It may be distressing or disturbing to some experiencers</h1>
+            <br>
+            
+        <button class="start-button" onclick="startExperience()">Start</button>
+
+        <h1>                      
+            -sudden loud noise<br>
+            If you feel uncomfortable, please close it immediately.
+            <br>
+            Please prioritize your well-being.
+            <br>
+            If you need support, reach out to a mental health professional or a crisis hotline.
+            <br>
+            
+            By pressing “Start,” you acknowledge that you have read and understood this warning.
+            </h1>
+    </div>
+
+    <script>
+        function startExperience() {
+            window.location.href = 'NEWS.html';
+        }
+    </script>
+
+</body>
+</html>

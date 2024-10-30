@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ĺ̷̘̦̦̪̺̽͛̈̉̊̒̅u̶̡̫̙͕͗̔͆̈̓̂͂͋͘̚c̷͔͉̉̍͋͒͛̽̀͋̕͘ͅk̵͙̒̍̉y̶̨̮̘͔̥͖͍̔͌́̾̀̀̈́̅̊͘ͅ ̶͍̟̯́̃͘g̸̏́̏̑͋ͅu̴͎͠y̷͉̩͎̥̗̲̲͊̑͐̃̏͐̕̚ͅ</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+            color: #ff0000;
+            text-align: center;
+            position: relative;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 20px;
+            text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.8);
+        }
+
+        .content {
+            max-width: 400px;
+            line-height: 1.6;
+            margin-top: 20px;
+            display: none; /* Hidden initially */
+            white-space: normal;
+            word-break: break-word;
+        }
+
+        .button-image {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            display: block; /* Image is displayed initially */
+            margin-top: 20px;
+        }
+
+        .arrow {
+            position: absolute;
+            top: 50%;
+            right: 30px;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .arrow:hover, .back-arrow:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Button image initially visible -->
+    <img src="luckyguy.jpg" alt="Press for News" class="button-image" onclick="revealContent()">
+
+    <!-- Content section hidden initially -->
+    <div class="content">
+        <h1>I'm still lucky</h1>
+        <p>
+            Why do people commit suicide? Honestly, I don't know. There are no signs. It just happens. I didn't know until now. They can hide it. For months, I kept telling myself "I'm fine", "I'm still okay". I don't remember when it started, but I know when it will end. I should ask for help. But when and where to start ? It just happens. I can't even feel myself anymore . "the world is better without me" keep coming to my mind. Is this still mine? Feelings of hopelessness and uselessness rise up in me. They are invisible, so why do I need a doctor? I don't want people to think I'm sick because I'm not. If I tell them, I'll make them sad and everyone is leaving from me . maybe i will wake up tomorrow and no longer feel like I want to die.and it didn't .No matter how hard I try, everything is messed up by me. I am just a failure in this fucked up world . But i am still very lucky.
+        <br>
+        i can end this by myself.
+        <br>
+        04.12.2024
+        </p>
+    </div>
+
+   <div class="arrow" onclick="showExtraInfo()">→</div> <!-- Right arrow to extra info -->
+   <div class="back-arrow" onclick="goBackToAudio()">←</div> <!-- Back to audio arrow -->
+
+    <!-- Hidden audio element -->
+    <audio id="click-sound" src="read.mp3"></audio>
+
+    <script>
+        function revealContent() {
+            // Play sound when image is clicked
+            document.getElementById("click-sound").play();
+
+            // Hide image and reveal content
+            document.querySelector('.button-image').style.display = 'none';
+            document.querySelector('.content').style.display = 'block';
+        }
+
+        function showExtraInfo() {
+            window.location.href = 'ESCAPE.html'; // Navigate to extra info page
+        }
+        function goBackToAudio() {
+            window.location.href = 'NEWS.html';
+        }
+        
+    </script>
+
+</body>
+</html>

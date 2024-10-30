@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A̴̜͇͈̥͖̱̔͂̾̋̈̋͊͝ ̸̨̨͍̺͖̖̩̥̥̎̈́ͅĞ̵̜̙̣̣̦̯̳̊͑́͗͌̂̂̚͜Ų̶̤͔͔̣̟̙̭̥̓͠N̴͇̯̠̟͕͖̒</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #000;
+            font-family: 'Arial', sans-serif;
+            color: #ff0000;
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgb(107, 4, 4);
+        }
+
+        .button-image {
+            width: 250px;
+            height: 200px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .button-image:hover {
+            transform: scale(1.1);
+        }
+
+        .popup {
+            display: none;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #000;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .popup button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: #000;
+            color: #ff0000;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .popup button:hover {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 50%;
+            left: 30px;
+            font-size: 40px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .back-arrow:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1></h1>
+    <img src="gun.png" alt="Gun Icon" class="button-image" onclick="showPopupOnce()">
+    
+    <div class="popup" id="popup">
+        <button onclick="shootYourself()">Shoot Yourself</button>
+        <button onclick="escape()">Escape</button>
+    </div>
+
+    <div class="back-arrow" onclick="goBackToInfo()">←</div>
+
+    <audio id="click-sound" src="click.mp3"></audio>
+    <audio id="shoot-sound" src="shot.mp3"></audio> <!-- Add the shooting sound effect -->
+
+    <script>
+        let clicked = false;
+
+        function showPopupOnce() {
+            if (!clicked) {
+                document.getElementById("click-sound").play();
+                document.getElementById("popup").style.display = "block";
+                clicked = true;
+            }
+        }
+
+        function shootYourself() {
+            document.getElementById("shoot-sound").play(); // Play the shooting sound
+            setTimeout(() => {
+                window.location.href = 'suicideEnd.html'; // Redirect after 1 second
+            }, 1000);
+        }
+
+        function escape() {
+            window.location.href = 'escapeEnd.html';
+        }
+
+        function goBackToInfo() {
+            window.location.href = 'LUCKY GUY.html';
+        }
+    </script>
+
+</body>
+</html>
